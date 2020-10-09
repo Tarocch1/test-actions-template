@@ -1,0 +1,13 @@
+name: Test workflow
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - id: checkout
+        name: Checkout
+        uses: actions/checkout@v2
